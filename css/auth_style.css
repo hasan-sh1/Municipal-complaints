@@ -1,0 +1,436 @@
+:root {
+    --mian_color: #257180;
+    --crame: #F2E5BF;
+    --orange: #FD8B51;
+    --brown: #CB6040;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--mian_color);
+    color: var(--crame);
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(226, 226, 226);
+    overflow: hidden;
+    background-image: url('../img/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.message {
+    text-align: center;
+    background-color: var(--mian_color);
+    width: 40%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: rgb(204, 203, 203) 1px 1px 20px;
+    position: fixed;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.9;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+
+.message h3 {
+    color: var(--orange);
+
+}
+
+.container {
+    width: 70%;
+    height: 90%;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.33);
+    border-radius: 1rem;
+    box-shadow: rgb(204, 203, 203) 1px 1px 20px;
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+
+.container .logo {
+    z-index: 999;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: solid var(--mian_color) 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--mian_color);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.container .logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--mian_color);
+    color: var(--crame);
+}
+
+.container .logo:active {
+    transform: scale(0.95);
+}
+
+.container .logo.light-mode {
+    border-color: var(--crame);
+    color: var(--crame);
+    background-color: transparent;
+}
+
+.container .logo.light-mode:hover {
+    background-color: var(--crame);
+    color: var(--mian_color);
+}
+
+.container .logo.light-mode:active {
+    transform: scale(0.95);
+}
+
+
+/* ديف الفورم */
+.formDiv {
+    width: 60%;
+    background-color: var(--crame);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease;
+    transform: translateX(0);
+    opacity: 1;
+    border-radius: 1rem 0 0 1rem;
+    z-index: 1;
+
+}
+
+.formGroup {
+flex: 1;
+}
+/* ديف العرض */
+.overlay {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    background-color: var(--mian_color);
+    transition: all 0.5s ease;
+    transform: translateX(0);
+    opacity: 0.9;
+    border-radius: 0 1rem 1rem 0;
+    z-index: 1;
+}
+
+.overlay h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.overlay button {
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.overlay button:hover {
+    background-color: white;
+    color: var(--mian_color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlay button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* تحريك ديف العرض لليسار */
+.overlay.move {
+    transform: translateX(-150%);
+    border-radius: 1rem 0 0 1rem;
+}
+
+/* تحريك ديف الفورم لليمين */
+.formDiv.move {
+    transform: translateX(66.7%);
+    border-radius: 0 1rem 1rem 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.signForm {
+    width: 100%;
+    height: 70%;
+}
+
+.signForm form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form h1 {
+    color: var(--mian_color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+form a i {
+    color: var(--mian_color);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 50%;
+    background-color: var(--crame);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--mian_color);
+}
+
+form a i:hover {
+    color: var(--brown);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form a i:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form .forgetPass {
+    color: #777;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+form .forgetPass:hover {
+    color: var(--mian_color);
+    text-decoration: underline;
+}
+
+form p {
+    color: #777;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+form .formRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 2.5rem;
+    position: relative;
+}
+.formRow .eye{
+    position: absolute;
+    right: 10%;
+    color: var(--mian_color);
+}
+form input {
+    background-color: var(--crame);
+    border: 2px solid var(--mian_color);
+    outline: none;
+    font-size: 0.9rem;
+    color: var(--mian_color);
+    transition: all 0.5s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 5px;
+}
+
+form input:focus {
+    border-color: var(--brown);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+form input::placeholder {
+    color: #999;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+form input[type="hidden"] {
+    display: none;
+}
+
+form input.error {
+    border-color: #ff3333;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/*  */
+form button {
+    height: 2.5rem;
+    width: 60%;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--mian_color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+form button:hover {
+    background-color: var(--brown);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form .forgetPass {
+    color: var(--mian_color);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .formDiv {
+        width: 100%;
+        height: 70%;
+        border-radius: 1rem 1rem 0 0;
+        transform: translateY(0);
+
+    }
+
+    .formDiv.move {
+        transform: translateY(42.5%);
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .formRow {
+        margin-top: 0.2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    form button {
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 30%;
+        top: auto;
+        bottom: 0;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .overlay.move {
+        transform: translateY(-233.5%);
+        border-radius: 1rem 1rem 0 0;
+
+    }
+
+    .signOverlay {
+        padding: 1rem;
+    }
+
+    .signOverlay h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .signOverlay p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .signOverlay button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

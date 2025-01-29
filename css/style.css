@@ -1,0 +1,115 @@
+:root {
+    --mian_color: #257180;
+    --crame: #F2E5BF;
+    --orange: #FD8B51;
+    --brown: #CB6040;
+    --gray: #dadadae2;
+}
+
+.hero-section h1 {
+    color: var(--mian_color);
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+}
+
+.hero-section p {
+    color: #0b0b0b;
+    font-size:2rem;
+    line-height: 1.8;
+}
+
+.info-section {
+    padding: 4rem 2rem;
+    width: 100%;
+    background: linear-gradient(135deg, var(--mian_color) 0%, var(--mian_color) 100%);
+}
+
+.info-section .info-box {
+    text-align: center;
+    padding: 2rem;
+    border: 3px solid rgba(255, 255, 255, 0.555);
+    border-radius: 1rem;
+    transition: all 0.4s ease;
+    background: rgba(198, 176, 176, 0.288);
+}
+.info-box{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.61);
+    border-radius: 1rem;
+    transition: all 0.4s ease;
+    padding: 2rem;
+    border: 3px solid rgba(255, 255, 255, 0.555);
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.info-section .info-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.info-section .info-box i {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.info-section .info-box h3 {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.first-section-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.first-section-title h2 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--mian_color) 0%, var(--mian_color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.first-section-title p {
+    color: rgba(4, 23, 70, 0.9);
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    background: linear-gradient(to right, #f3f4f6, #ffffff);
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.hero-section2 {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-section2:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
